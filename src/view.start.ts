@@ -1,0 +1,41 @@
+import { AppService } from './service.app';
+import { DomService } from './service.dom';
+import { CharacterCreationView } from './view.character-creation';
+
+export class StartView {
+  static newGame(): void {
+    CharacterCreationView.render();
+  }
+  static continueGame(): void {
+    console.warn('niy');
+  }
+  static render(): void {
+    const savedGameExists = false; // #%
+
+    // start screen title
+    const title = DomService.getP('ifprg');
+
+    // new game button
+    const newGameBtn = DomService.getButton({
+      text: 'new game',
+      click: this.newGame
+    });
+    newGameBtn.style.display = 'block';
+
+    // continue game button
+    const continueGameBtn = DomService.getButton({
+      text: 'continue game',
+      click: this.continueGame
+    });
+    continueGameBtn.disabled = savedGameExists;
+    newGameBtn.style.display = 'block';
+
+    // assembly
+    AppService.clear();
+    const frg = new DocumentFragment();
+    frg.appendChild(title);
+    frg.appendChild(newGameBtn);
+    frg.appendChild(continueGameBtn);
+    document.getElementById('app').appendChild(frg);
+  }
+}
