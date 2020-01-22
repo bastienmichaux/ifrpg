@@ -1,0 +1,25 @@
+{
+  "name": "ifrpg",
+  "version": "1.0.0",
+  "description": "toy",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bastienmichaux/ifrpg.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bastienmichaux/ifrpg/issues"
+  },
+  "homepage": "https://github.com/bastienmichaux/ifrpg#readme",
+  "dependencies": {
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.7.5",
+    "webpack": "^4.41.5"
+  }
+}
