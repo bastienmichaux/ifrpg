@@ -1,0 +1,31 @@
+The UI is divided into views
+
+MAIN VIEWS
+
+start: main menu, shows when launching the app
+
+exploration: explore and interact with the world around
+
+inventory: character inventory
+
+character: character sheet
+
+diary: quests, rumors
+
+spellbook: for wizards, known/learned spells
+
+travel: known, reachable destinations, and how to reach them
+
+CONTEXTUAL VIEWS
+
+character creation: when beginning a new game, player create their character from various options
+
+container: when opening a container and examining what it contains
+
+loot: same as container, but for corpses and pickpocket
+
+dialogue: speaking with people (and not people)
+
+narration: special decision/information à la Pillars of Eternity
+
+craft: if craft is added to the game, it's gonna use a special view

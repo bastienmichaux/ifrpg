@@ -1,0 +1,13 @@
+"use random generation to create
+what an army of programmers/writers would do for your project"
+
+world structure:
+world > regions (wilderness)
+region > locations (village,town,dungeon,lair,fortress,cave,etc)
+location > places (street,city gate,place,park)
+place > buildings
+building > rooms
+
+containers:
+- content f (what the owner has, would store in it)
+- lockpick/traps: f (how precious content is for the owner)

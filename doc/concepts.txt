@@ -1,0 +1,6 @@
+world is made of locations,
+- a location can be wilderness, a town, a dungeon, a cave...
+- locations group different places
+- so in wilderness, possible places could be a hideout, a camp, a witch's hut
+
+rooms are connected through exits
