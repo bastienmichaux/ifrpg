@@ -1,6 +1,27 @@
 import { DomService } from "./service.dom";
 
 export class SwitchViewComponent {
+  static renderInventoryView() {
+    console.log('niy');
+  }
+  static renderCharacterView() {
+    console.log('niy');
+  }
+  static renderDiaryView() {
+    console.log('niy');
+  }
+  static renderTravelView() {
+    console.log('niy');
+  }
+  static renderExplorationView() {
+    console.log('niy');
+  }
+  static renderSpellbookView() {
+    console.log('niy');
+  }
+  static renderSettingsView() {
+    console.log('niy');
+  }
   static render(): DocumentFragment {
     // buttons
     const inventoryBtn = DomService.getButton({
