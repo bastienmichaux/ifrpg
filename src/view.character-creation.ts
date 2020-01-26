@@ -1,9 +1,10 @@
 import { AppService } from "./service.app";
 import { DomService } from "./service.dom";
+import { ExplorationView } from "./view.exploration";
 
 export class CharacterCreationView {
   static submitCharacter() {
-    console.warn('niy');
+    ExplorationView.render();
   }
   static render(): void {
     // page title
