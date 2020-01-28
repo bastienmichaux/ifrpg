@@ -17,19 +17,17 @@ export class StartView {
     const title = DomService.getP('ifprg');
 
     // new game button
-    const newGameBtn = DomService.getButton({
+    const newGameBtn = DomService.getBlockyButton({
       text: 'New game',
       click: this.newGame
     });
-    newGameBtn.className = 'blocky';
 
     // continue game button
-    const continueGameBtn = DomService.getButton({
+    const continueGameBtn = DomService.getBlockyButton({
       text: 'Continue game',
       click: this.continueGame
     });
     continueGameBtn.disabled = savedGameExists;
-    continueGameBtn.className = 'blocky';
 
     // assembly
     AppService.clear();

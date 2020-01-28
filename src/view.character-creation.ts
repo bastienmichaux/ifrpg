@@ -29,11 +29,10 @@ export class CharacterCreationView {
     });
 
     // submit button
-    const submitBtn = DomService.getButton({
+    const submitBtn = DomService.getBlockyButton({
       text: 'Create character',
       click: this.submitCharacter
     });
-    submitBtn.className = 'blocky';
 
     // assembly
     AppService.clear();
