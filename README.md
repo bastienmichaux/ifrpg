@@ -13,5 +13,9 @@ hieroglyphs:
 - '#%' temp placeholder for actual code
 - '$TODO' todo
 
-now:
-- char creation
+next:
+- char creation: character-class structs
+- char creation: describe selected class to player
+- char creation: get selected class
+- char creation: apply class choice to character instantation
+- char creation: list classes from res
