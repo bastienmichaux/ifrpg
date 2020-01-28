@@ -58,10 +58,12 @@ export class DomService {
       input.type = 'radio';
       input.name = tpl.id;
       input.value = value.toLowerCase();
+
       // label
       const label = document.createElement('label');
       label.textContent = value;
       label.htmlFor = 'niy'; // #%
+
       // assembly
       div.appendChild(input);
       div.appendChild(label);

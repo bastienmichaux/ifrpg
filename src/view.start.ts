@@ -10,7 +10,8 @@ export class StartView {
     console.warn('niy');
   }
   static render(): void {
-    const savedGameExists = false; // #%
+    // $TODO: get it from storage
+    const savedGameExists = false;
 
     // start screen title
     const title = DomService.getP('ifprg');
