@@ -27,14 +27,15 @@ export class StartView {
       text: 'Continue game',
       click: this.continueGame
     });
-    continueGameBtn.disabled = savedGameExists;
 
     // assembly
     AppService.clear();
     const frg = new DocumentFragment();
     frg.appendChild(title);
     frg.appendChild(newGameBtn);
-    frg.appendChild(continueGameBtn);
+    savedGameExists
+      ? frg.appendChild(DomService.getP('No saved game'))
+      : frg.appendChild(continueGameBtn);
     document.getElementById('app').appendChild(frg);
   }
 }
