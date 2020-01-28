@@ -1,11 +1,11 @@
 import { DomService } from "./service.dom";
 import { AppService } from "./service.app";
-import { SwitchViewComponent } from "./component.switch-view";
+import { ViewSwitchComponent } from "./component.view-switch";
 
 export class ExplorationView {
   static render() {
     // stored data
-    // game start ? random gen : get it from storage
+    // $TODO: game start ? random gen : get it from storage
     const location = 'No location';
     const time = 'Day 1 - noon';
 
@@ -17,7 +17,7 @@ export class ExplorationView {
     AppService.clear();
     const frg = new DocumentFragment();
     frg.appendChild(statusP);
-    frg.appendChild(SwitchViewComponent.render());
+    frg.appendChild(ViewSwitchComponent.render());
     document.getElementById('app').appendChild(frg);
   }
 }

@@ -1,6 +1,6 @@
 import { DomService } from "./service.dom";
 
-export class SwitchViewComponent {
+export class ViewSwitchComponent {
   static renderInventoryView() {
     console.log('niy');
   }
