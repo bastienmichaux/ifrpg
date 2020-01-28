@@ -2,11 +2,29 @@ import { AppService } from "./service.app";
 import { DomService } from "./service.dom";
 import { ExplorationView } from "./view.exploration";
 import { CharacterGenerator } from "./generator.character";
+import { Character } from "./model.character";
 
 export class CharacterCreationView {
+  static getSelectedValues(): Character {
+    // TODO: smarter
+    const nameInput = <HTMLInputElement>document.getElementById('name');
+    const name = nameInput.value;
+    const genderRadioInputs = document.getElementsByName('gender');
+    let selectedGender: boolean;
+    genderRadioInputs.forEach((input: HTMLInputElement) => {
+      if (input.checked === true) {
+        selectedGender = (input.value === 'male' ? true : false);
+      }
+    });
+    console.log(name);
+    console.log(selectedGender);
+    return new Character(name, selectedGender);
+  }
+
   static submitCharacter() {
-    // TODO: generate character from inputs
-    const playerCharacter = CharacterGenerator.getCharacter();
+    const character = CharacterCreationView.getSelectedValues();
+    // TODO: store character
+    // TODO: generate random starting position
     ExplorationView.render();
   }
 
