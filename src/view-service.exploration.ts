@@ -1,6 +1,7 @@
 export class ExplorationViewService {
   static dayTimeToString(daytime: number): string {
     // TODO: check daytime < 24*60*60
+    // TODO: move day time period nouns to constants
     // TODO: daytime f day of the year
     // TODO: unknown/assumed daytime if inside since > (n hours inside + (avg(intelligence+perception)/2) - 20)
     let daytimeStr = '';
