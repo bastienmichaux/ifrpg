@@ -6,9 +6,12 @@ export class StartView {
   static newGame(): void {
     CharacterCreationView.render();
   }
+
   static continueGame(): void {
+    // load saved game, last saved view
     console.warn('niy');
   }
+
   static render(): void {
     // $TODO: get it from storage
     const savedGameExists = false;
@@ -23,19 +26,20 @@ export class StartView {
     });
 
     // continue game button
-    const continueGameBtn = DomService.getBlockyButton({
-      text: 'Continue game',
-      click: this.continueGame
-    });
+    // if no saved game, just display "no saved game"
+    const continueGameElement = !savedGameExists
+      ? DomService.getP('No saved game')
+      : DomService.getBlockyButton({
+        text: 'Continue game',
+        click: this.continueGame
+      });
 
     // assembly
     AppService.clear();
     const frg = new DocumentFragment();
     frg.appendChild(title);
     frg.appendChild(newGameBtn);
-    savedGameExists
-      ? frg.appendChild(DomService.getP('No saved game'))
-      : frg.appendChild(continueGameBtn);
+    frg.appendChild(continueGameElement);
     document.getElementById('app').appendChild(frg);
   }
 }
