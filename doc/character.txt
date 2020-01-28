@@ -1,0 +1,11 @@
+characteristics: 10 = average (anyone)
+  strength
+  dexterity
+  endurance
+  intelligence
+  perception
+  personality
+  willpower
+
+secondary characteristics:
+  hp: 10 + (endurance-10)
