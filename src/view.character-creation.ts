@@ -1,11 +1,12 @@
 import { AppService } from "./service.app";
 import { DomService } from "./service.dom";
 import { ExplorationView } from "./view.exploration";
-import { Character } from "./model.character";
+import { CharacterGenerator } from "./generator.character";
 
 export class CharacterCreationView {
   static submitCharacter() {
-    const playerCharacter = new Character('Anonymous', true);
+    // TODO: generate character from inputs
+    const playerCharacter = CharacterGenerator.getCharacter();
     ExplorationView.render();
   }
 
@@ -45,8 +46,8 @@ export class CharacterCreationView {
     frg.appendChild(genderInput);
     frg.appendChild(DomService.getP('Character name'));
     frg.appendChild(nameInput);
-    frg.appendChild(DomService.getP('Character class'));
-    frg.appendChild(classInput);
+    // frg.appendChild(DomService.getP('Character class'));
+    // frg.appendChild(classInput);
     frg.appendChild(submitBtn);
     document.getElementById('app').appendChild(frg);
   }

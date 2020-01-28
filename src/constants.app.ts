@@ -1,0 +1,4 @@
+export const CONSTANTS = {
+  BASE_HP: 10,
+  BASE_PRIMARY_CHARACTERISTIC_SCORE: 10,
+};
