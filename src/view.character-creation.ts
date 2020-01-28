@@ -1,11 +1,14 @@
 import { AppService } from "./service.app";
 import { DomService } from "./service.dom";
 import { ExplorationView } from "./view.exploration";
+import { Character } from "./model.character";
 
 export class CharacterCreationView {
   static submitCharacter() {
+    const playerCharacter = new Character('Anonymous', true);
     ExplorationView.render();
   }
+
   static render(): void {
     // page title
     const title = DomService.getP('Create your character');
