@@ -1,4 +1,5 @@
 # ifrpg
+
 toy
 - random gen
 - pure dom (ol school)
@@ -10,3 +11,7 @@ optimization:
 
 hieroglyphs:
 - '#%' temp placeholder for actual code
+- '$TODO' todo
+
+now:
+- char creation
