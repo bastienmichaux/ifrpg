@@ -21,6 +21,12 @@ export class DomService {
     return btn;
   }
 
+  static getBlockyButton(tpl: buttonTemplate): HTMLButtonElement {
+    const btn = DomService.getButton(tpl);
+    btn.className = 'blocky';
+    return btn;
+  }
+
   static getP(text: string): HTMLParagraphElement {
     const p = document.createElement('p');
     p.textContent = text;
