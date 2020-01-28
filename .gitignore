@@ -1,3 +1,6 @@
+.sass-cache/
 dist/
 doc/
 node_modules/
+*.css
+*.css.map
