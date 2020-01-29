@@ -4,7 +4,8 @@
   "description": "toy",
   "main": "index.js",
   "scripts": {
-    "sass": "sass index.scss index.css"
+    "sass": "sass index.scss index.css",
+    "compile": "npx tsc"
   },
   "repository": {
     "type": "git",
