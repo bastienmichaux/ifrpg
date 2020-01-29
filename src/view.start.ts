@@ -22,7 +22,7 @@ export class StartView {
     // new game button
     const newGameBtn = DomService.getBlockyButton({
       text: 'New game',
-      click: this.newGame
+      click: StartView.newGame
     });
 
     // continue game button
@@ -31,7 +31,7 @@ export class StartView {
       ? DomService.getP('No saved game')
       : DomService.getBlockyButton({
         text: 'Continue game',
-        click: this.continueGame
+        click: StartView.continueGame
       });
 
     // assembly

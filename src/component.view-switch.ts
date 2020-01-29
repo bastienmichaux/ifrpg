@@ -33,31 +33,31 @@ export class ViewSwitchComponent {
     // buttons
     const inventoryBtn = DomService.getButton({
       text: 'Inventory',
-      click: () => console.log('niy')
+      click: () => ViewSwitchComponent.renderInventoryView
     });
     const characterBtn = DomService.getButton({
       text: 'Character',
-      click: () => console.log('niy')
+      click: () => ViewSwitchComponent.renderCharacterView
     });
     const diaryBtn = DomService.getButton({
       text: 'Diary',
-      click: () => console.log('niy')
+      click: () => ViewSwitchComponent.renderDiaryView
     });
     const travelBtn = DomService.getButton({
       text: 'Travel',
-      click: () => console.log('niy')
+      click: () => ViewSwitchComponent.renderTravelView
     });
     const explorationBtn = DomService.getButton({
       text: 'Exploration',
-      click: () => console.log('niy')
+      click: () => ViewSwitchComponent.renderExplorationView
     });
     const spellbookBtn = DomService.getButton({
       text: 'Spellbook',
-      click: () => console.log('niy')
+      click: () => ViewSwitchComponent.renderSpellbookView
     });
     const settingsBtn = DomService.getButton({
       text: 'Menu',
-      click: () => console.log('niy')
+      click: () => ViewSwitchComponent.renderSettingsView
     });
 
     // assembly

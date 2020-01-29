@@ -53,7 +53,7 @@ export class CharacterCreationView {
     // submit button
     const submitBtn = DomService.getBlockyButton({
       text: 'Create character',
-      click: this.submitCharacter
+      click: CharacterCreationView.submitCharacter
     });
 
     // assembly
