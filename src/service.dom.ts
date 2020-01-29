@@ -1,6 +1,6 @@
 interface buttonTemplate {
   text: string;
-  click: () => any;
+  click: any;
 };
 
 interface textInputTemplate {

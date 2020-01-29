@@ -1,14 +1,16 @@
 import { DomService } from "./service.dom";
 import { AppService } from "./service.app";
 import { ViewSwitchComponent } from "./component.view-switch";
+import { StatusComponent } from "./component.status";
 
 export class SettingsView {
   static render() {
     // assembly
     AppService.clear();
     const frg = new DocumentFragment();
-    frg.appendChild(DomService.getP('Settings view'));
-    frg.appendChild(ViewSwitchComponent.render());
+    frg.appendChild(StatusComponent.getComponent());
+    frg.appendChild(ViewSwitchComponent.getComponent());
+    frg.appendChild(DomService.getP('Menu view'));
     document.getElementById('app').appendChild(frg);
   }
 }
