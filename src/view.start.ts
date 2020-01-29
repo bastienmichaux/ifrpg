@@ -13,7 +13,7 @@ export class StartView {
   }
 
   static render(): void {
-    // $TODO: get it from storage
+    // TODO: get it from storage
     const savedGameExists = false;
 
     // start screen title
