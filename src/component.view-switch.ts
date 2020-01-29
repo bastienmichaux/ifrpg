@@ -1,63 +1,70 @@
 import { DomService } from "./service.dom";
+import { InventoryView } from "./view.inventory";
+import { CharacterView } from "./view.character";
+import { DiaryView } from "./view.diary";
+import { TravelView } from "./view.travel";
+import { ExplorationView } from "./view.exploration";
+import { SpellbookView } from "./view.spellbook";
+import { SettingsView } from "./view.settings";
 
 export class ViewSwitchComponent {
   static renderInventoryView() {
-    console.log('niy');
+    InventoryView.render();
   }
 
   static renderCharacterView() {
-    console.log('niy');
+    CharacterView.render();
   }
 
   static renderDiaryView() {
-    console.log('niy');
+    DiaryView.render();
   }
 
   static renderTravelView() {
-    console.log('niy');
+    TravelView.render();
   }
 
   static renderExplorationView() {
-    console.log('niy');
+    ExplorationView.render();
   }
 
   static renderSpellbookView() {
-    console.log('niy');
+    SpellbookView.render();
   }
 
   static renderSettingsView() {
-    console.log('niy');
+    SettingsView.render();
   }
 
-  static render(): DocumentFragment {
+  static getComponent(): DocumentFragment {
     // buttons
     const inventoryBtn = DomService.getButton({
       text: 'Inventory',
-      click: () => ViewSwitchComponent.renderInventoryView
+      click: () => ViewSwitchComponent.renderInventoryView()
     });
     const characterBtn = DomService.getButton({
       text: 'Character',
-      click: () => ViewSwitchComponent.renderCharacterView
+      click: () => ViewSwitchComponent.renderCharacterView()
     });
     const diaryBtn = DomService.getButton({
       text: 'Diary',
-      click: () => ViewSwitchComponent.renderDiaryView
+      click: () => ViewSwitchComponent.renderDiaryView()
     });
     const travelBtn = DomService.getButton({
       text: 'Travel',
-      click: () => ViewSwitchComponent.renderTravelView
+      click: () => ViewSwitchComponent.renderTravelView()
     });
     const explorationBtn = DomService.getButton({
       text: 'Exploration',
-      click: () => ViewSwitchComponent.renderExplorationView
+      click: () => ViewSwitchComponent.renderExplorationView()
     });
     const spellbookBtn = DomService.getButton({
       text: 'Spellbook',
-      click: () => ViewSwitchComponent.renderSpellbookView
+      click: () => ViewSwitchComponent.renderSpellbookView()
     });
     const settingsBtn = DomService.getButton({
       text: 'Menu',
-      click: () => ViewSwitchComponent.renderSettingsView
+      click: () => ViewSwitchComponent.renderSettingsView()
     });
 
     // assembly
