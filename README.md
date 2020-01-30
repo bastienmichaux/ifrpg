@@ -12,6 +12,7 @@ toy project:
 run:
 ```bash
 npm i -g webpack
+npm i
 webpack -w
 # then open index.html
 ```
