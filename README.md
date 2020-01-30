@@ -14,6 +14,7 @@ hieroglyphs:
 - 'TODO' todo
 
 now:
+- [ ] store/retrieve daytime
 - [ ] simple generator
 - [ ] dabble with indexed db
 
@@ -29,3 +30,4 @@ next:
 
 done:
 - [x] main view: actually switch views
+- [x] random daytime
