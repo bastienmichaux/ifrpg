@@ -1,17 +1,26 @@
 # ifrpg
 
-toy
+interactive fiction / randomly-generated sandbox rpg
+
+**in development, nothing functional yet**
+
+toy project:
 - random gen
 - pure dom (ol school)
+- d&d nerdism
+
+run:
+```bash
+npm i -g webpack
+webpack -w
+# then open index.html
+```
 
 optimization:
 - fragments
 - low dom depth
 - css selectors
 
-hieroglyphs:
-- '#%' temp placeholder for actual code
-- 'TODO' todo
 
 now:
 - [ ] store/retrieve daytime
@@ -31,3 +40,7 @@ next:
 done:
 - [x] main view: actually switch views
 - [x] random daytime
+
+hieroglyphs:
+- '#%' temp placeholder for actual code
+- 'TODO' todo
