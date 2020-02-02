@@ -4,8 +4,11 @@
   "description": "toy",
   "main": "index.js",
   "scripts": {
-    "sass": "sass index.scss index.css",
-    "compile": "npx tsc"
+    "sass": "sass style.scss style.css",
+    "compile": "webpack -w",
+    "build": "npm run sass && npm run compile",
+    "clean": "rm -rf node_modules && rm -rf dist",
+    "clean-build": "npm run clean && npm run -build"
   },
   "repository": {
     "type": "git",
