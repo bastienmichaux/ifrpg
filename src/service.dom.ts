@@ -59,16 +59,18 @@ export class DomService {
     const div = document.createElement('div');
     const values = tpl.values;
     values.forEach(value => {
+      const val = value.toLowerCase();
+
       // radio input
       const input = document.createElement('input');
       input.type = 'radio';
       input.name = tpl.id;
-      input.value = value.toLowerCase();
+      input.value = input.id = val;
 
       // label
       const label = document.createElement('label');
       label.textContent = value;
-      label.htmlFor = 'niy'; // #%
+      label.htmlFor = val;
 
       // assembly
       div.appendChild(input);
