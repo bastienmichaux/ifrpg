@@ -5,12 +5,19 @@ import { StatusComponent } from "./component.status";
 
 export class ExplorationView {
   static render() {
+    // TODO: list of visible interactibles
+    const interactibles = DomService.getP('Interactible elements');
+
+    // TODO: description based on visible interactibles
+    const desc = DomService.getP('Current place description');
+
     // assembly
     AppService.clear();
     const frg = new DocumentFragment();
     frg.appendChild(StatusComponent.getComponent());
     frg.appendChild(ViewSwitchComponent.getComponent());
-    frg.appendChild(DomService.getP('Exploration view'));
+    frg.appendChild(interactibles);
+    frg.appendChild(desc);
     document.getElementById('app').appendChild(frg);
   }
 }

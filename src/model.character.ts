@@ -19,6 +19,8 @@ export class Character {
   // aliases
   BASE_CHAR_SCORE = CONSTANTS.BASE_PRIMARY_CHARACTERISTIC_SCORE;
 
+  // TODO: what's needed to generate a character?
+  // (randomly or based on player's choices)
   constructor(name: string, gender: boolean) {
     this.name = name;
     this.gender = gender;

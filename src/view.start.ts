@@ -8,7 +8,7 @@ export class StartView {
   }
 
   static continueGame(): void {
-    // load saved game, last saved view
+    // TODO: load saved game, last saved view
     console.warn('niy');
   }
 

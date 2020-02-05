@@ -11,6 +11,7 @@ export class TravelView {
     frg.appendChild(StatusComponent.getComponent());
     frg.appendChild(ViewSwitchComponent.getComponent());
     frg.appendChild(DomService.getP('Travel view'));
+    frg.appendChild(DomService.getP('List of places you can travel to'));
     document.getElementById('app').appendChild(frg);
   }
 }
