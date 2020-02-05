@@ -1,0 +1,17 @@
+warrior
+  st 14 ag 12 en 14
+  in 10 wp 10
+  pn 10 py 12
+  weapon proficiency
+
+rogue
+  st 12 ag 14 en 10
+  in 10 wp 10
+  pn 14 py 12
+  thief skills
+
+mage
+  st 10 ag 10 en 10
+  in 16 wp 14
+  pn 12 py 10
+  spells

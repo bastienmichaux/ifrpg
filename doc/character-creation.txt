@@ -1,0 +1,10 @@
+- choose class
+- primary characteristics?
+- skills?
+- trait?
+- spells?
+- equipment?
+- appearance:
+  gender
+  name
+  description+ (hair, eyes)

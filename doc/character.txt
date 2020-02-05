@@ -5,7 +5,55 @@ characteristics: 10 = average (anyone)
   intelligence
   perception
   personality
-  willpower
+  willpower?
 
 secondary characteristics:
   hp: 10 + (endurance-10)
+
+skills: general
+  acrobatics? athletics
+  athletics
+  insight? psychology
+  lore? knowledge+
+  magic
+  medicine
+  perception
+  persuasion
+  pickpocket
+  security
+  stealth
+  survival
+
+skills: fight
+  armor?+
+  dodge?
+  fighting style?+
+  weapon proficiency?+
+
+skills: knowledge/lore
+  arcana?
+  history?
+  nature?
+  religion?
+
+skills: craft/profession
+  alchemy?
+
+other
+  size
+  type
+  natural armor
+  senses
+  armor class?
+  hit points
+  speed?
+  saving throws?
+  vulnerabilities/resistances
+  immunities
+  languages?
+  level
+  xp?
+  actions/powers
+  reactions?
+  equipment
+  ingredients (using butchering or other)

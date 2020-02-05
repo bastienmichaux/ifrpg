@@ -1,0 +1,25 @@
+easy:
+  find ingredient
+  collect debt
+  deliver a letter, package
+  steal item from npc
+  clear house, cave, from beast
+  kill beast roaming the surroundings
+  investigate which creature is roaming the surrounding (then kill it)
+  execute a traitor
+  find scroll, book, artifact
+  help/heal using spell, potion
+  find cure
+  lay spirit to rest
+  find person disappeared in the wild
+  hunt down highwayman / group of bandits
+  bounty hunt
+  escort someone, caravan
+  body guard
+  fight duel for a coward
+  smuggle somthing, don't get caught
+  catch smuggler, drug dealer
+  buy slave from owner
+  intimidate a bully
+  punish cheating lover
+  find drugs for addict/party
