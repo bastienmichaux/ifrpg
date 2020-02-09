@@ -41,6 +41,12 @@ export class DomService {
     return p;
   }
 
+  static getH1(text: string): HTMLHeadingElement {
+    const h = document.createElement('h1');
+    h.textContent = text;
+    return h;
+  }
+
   static getTextInput(tpl: textInputTemplate): HTMLInputElement {
     const input = document.createElement('input');
     input.type = 'text';
