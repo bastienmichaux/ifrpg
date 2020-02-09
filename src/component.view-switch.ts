@@ -7,6 +7,8 @@ import { ExplorationView } from "./view.exploration";
 import { SpellbookView } from "./view.spellbook";
 import { SettingsView } from "./view.settings";
 
+// "navbar" in main game view
+
 export class ViewSwitchComponent {
   static renderInventoryView() {
     InventoryView.render();
@@ -36,8 +38,8 @@ export class ViewSwitchComponent {
     SettingsView.render();
   }
 
+  // TODO: toggle display/enabled
   static getComponent(): DocumentFragment {
-    // buttons
     const inventoryBtn = DomService.getButton({
       text: 'Inventory',
       click: () => ViewSwitchComponent.renderInventoryView()
