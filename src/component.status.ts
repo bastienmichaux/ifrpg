@@ -1,13 +1,13 @@
 import { DomService } from "./service.dom";
-import { NewGameGenerator } from "./generator.new-game";
 import { TimeService } from "./service.time";
+import { StoreService } from "./service.store";
 
 export class StatusComponent {
   static getComponent(): HTMLElement {
     // stored data
     // TODO: game start ? random gen : get it from storage
     const location = 'No location';
-    const time = NewGameGenerator.getDayTime();
+    const time = StoreService.loadDate();
     const timeStr = `Day 1 - ${TimeService.getTimeToString(time)}`;
 
     // time - day
