@@ -1,4 +1,4 @@
-export const CONSTANTS = {
+export const CHARACTER_CONSTANTS = {
   BASE_HP: 10,
   BASE_CHARACTERISTICS: 10,
 };

@@ -1,4 +1,4 @@
-import { CONSTANTS } from "./constants.app";
+import { CHARACTER_CONSTANTS } from "./constants.app";
 
 export class Character {
   readonly name: string;
@@ -17,7 +17,7 @@ export class Character {
   maxHp: number;
 
   // aliases
-  BASE_CHAR = CONSTANTS.BASE_CHARACTERISTICS;
+  BASE_CHAR = CHARACTER_CONSTANTS.BASE_CHARACTERISTICS;
 
   // TODO: what's needed to generate a character?
   // (randomly or based on player's choices)
@@ -34,6 +34,6 @@ export class Character {
     this.charisma = this.BASE_CHAR;
 
     // secondary characteristics
-    this.hp = this.maxHp = CONSTANTS.BASE_HP;
+    this.hp = this.maxHp = CHARACTER_CONSTANTS.BASE_HP;
   }
 }
