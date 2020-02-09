@@ -8,6 +8,11 @@ export class ExplorationView {
     // TODO: list of visible interactibles
     const interactibles = DomService.getP('Interactible elements');
 
+    const list = DomService.ArrayToUl([
+      { text: `Red Fang Inn` },
+      { text: `Farmer's house` },
+    ]);
+
     // TODO: description based on visible interactibles
     const desc = DomService.getP('Current place description');
 
@@ -17,6 +22,7 @@ export class ExplorationView {
     frg.appendChild(StatusComponent.getComponent());
     frg.appendChild(ViewSwitchComponent.getComponent());
     frg.appendChild(interactibles);
+    frg.appendChild(list);
     frg.appendChild(desc);
     document.getElementById('app').appendChild(frg);
   }
