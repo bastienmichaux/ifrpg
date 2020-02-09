@@ -2,8 +2,7 @@ import { AppService } from "./service.app";
 import { DomService } from "./service.dom";
 import { ExplorationView } from "./view.exploration";
 import { Character } from "./model.character";
-import { StoreService } from "./service.store";
-import { DateService, GameDate } from "./service.date";
+import { NewGameService } from "./service.new-game";
 
 export class CharacterCreationView {
   static getSelectedValues(): Character {
@@ -24,7 +23,8 @@ export class CharacterCreationView {
 
   static submitCharacter() {
     const character = CharacterCreationView.getSelectedValues();
-
+    NewGameService.setNewGame();
+    ExplorationView.render();
   }
 
   static render(): void {
