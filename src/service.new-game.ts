@@ -9,12 +9,8 @@ export class NewGameService {
     // TODO: generate random starting position
     ExplorationView.render();
     const gameDate: GameDate = DateService.randomDate();
-    console.log(gameDate);
     const gameDateToString: string = DateService.dateToString(gameDate);
-    console.log(gameDate);
     StoreService.saveDate(gameDate);
     StoreService.saveDateToString(gameDateToString);
-    console.log(StoreService.loadDate());
-    console.log(StoreService.loadDateToString());
   }
 }
