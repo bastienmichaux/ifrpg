@@ -1,10 +1,10 @@
 import { DomService } from "./service.dom";
 import { StoreService } from "./service.store";
-import { LocationService } from "./service.location";
+import { PlayerLocation } from "./service.location";
 
 export class StatusComponent {
   private static getLocationText() {
-    const currentPlayerLocation = LocationService.getPlayerLocation();
+    const currentPlayerLocation: PlayerLocation = StoreService.loadPlayerLocation();
     return DomService.getP(`${currentPlayerLocation.region} > ${currentPlayerLocation.place} > ${currentPlayerLocation.room}`);
   }
 
@@ -12,9 +12,9 @@ export class StatusComponent {
   static getComponent(): DocumentFragment {
     const timeStr = StoreService.loadDateToString();
     const timeP = DomService.getP(`${timeStr}`);
-    // TODO: breadcrumbs from store
     const travelCrumbs = StatusComponent.getLocationText();
 
+    // assembly
     const frg = new DocumentFragment();
     const div = document.createElement('div');
     div.appendChild(travelCrumbs);

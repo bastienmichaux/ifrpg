@@ -27,8 +27,8 @@ export class StoreService {
   static loadDateToString(): string {
     return StoreService.load(StoreAlias.DATE_TO_STRING);
   }
-  static savePlayerLocation(currentPlayerLocation: PlayerLocation): void {
-    return StoreService.save(StoreAlias.PLAYER_LOCATION, currentPlayerLocation);
+  static savePlayerLocation(playerLocation: PlayerLocation): void {
+    StoreService.save(StoreAlias.PLAYER_LOCATION, playerLocation);
   }
   static loadPlayerLocation(): PlayerLocation {
     return StoreService.load(StoreAlias.PLAYER_LOCATION);

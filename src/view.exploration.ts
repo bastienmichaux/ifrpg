@@ -9,7 +9,18 @@ export class ExplorationView {
     const interactibles = DomService.getP('Interactible elements');
 
     const list = DomService.ArrayToUl([
-      { text: `Red Fang Inn` },
+      { text: `Lord's Manor` },
+      { text: `Temple of Oghma` },
+      { text: `The Red Fang's Inn` },
+      { text: `Belcomb's Bakery` },
+      { text: `Belcomb's Butcher` },
+      { text: `Mill` },
+      { text: `Burgher's house` },
+      { text: `Burgher's house` },
+      { text: `Farmer's house` },
+      { text: `Farmer's house` },
+      { text: `Farmer's house` },
+      { text: `Farmer's house` },
       { text: `Farmer's house` },
     ]);
 
