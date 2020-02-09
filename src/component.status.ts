@@ -1,20 +1,35 @@
 import { DomService } from "./service.dom";
 import { StoreService } from "./service.store";
 
+interface PlayerLocation {
+  region: string;
+  place: string;
+  room: string;
+}
+
 export class StatusComponent {
+  private static getLocationText() {
+    // TODO: get from store
+    const currentPlayerLocation: PlayerLocation = {
+      region: 'Bitter Coast',
+      place: 'Seyda Neen',
+      room: 'Census and Excise Office'
+    };
+    return DomService.getP(`${currentPlayerLocation.region} > ${currentPlayerLocation.place} > ${currentPlayerLocation.room}`);
+  }
+
+  // TODO: left align location, right align time
   static getComponent(): DocumentFragment {
-    // stored data
-    const location = 'No location';
     const timeStr = StoreService.loadDateToString();
-
+    const timeP = DomService.getP(`${timeStr}`);
     // TODO: breadcrumbs from store
-    const travelCrumbs = DomService.getP(`Region > Settlement > Room`);
+    const travelCrumbs = StatusComponent.getLocationText();
 
-    // time - day
-    // TODO: left align location, right align time
     const frg = new DocumentFragment();
-    frg.appendChild(travelCrumbs);
-    frg.appendChild(DomService.getP(`${location} - ${timeStr}`));
+    const div = document.createElement('div');
+    div.appendChild(travelCrumbs);
+    div.appendChild(timeP);
+    frg.appendChild(div);
     return frg;
   }
 }
