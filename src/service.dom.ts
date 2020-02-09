@@ -13,6 +13,14 @@ interface radioInputTemplate {
   values: Array<string>;
 };
 
+interface liTemplate {
+  text: string;
+}
+
+interface ulTemplate {
+  children: Array<liTemplate>;
+}
+
 export class DomService {
   static getButton(tpl: buttonTemplate): HTMLButtonElement {
     const btn = document.createElement('button');
@@ -78,5 +86,15 @@ export class DomService {
       div.appendChild(document.createElement('br'));
     });
     return div;
+  }
+
+  static ArrayToUl(arr: Array<liTemplate>): HTMLUListElement {
+    const list: HTMLOListElement | HTMLUListElement = document.createElement('ul');
+    arr.forEach((elem) => {
+      const li = document.createElement('li');
+      li.textContent = elem.text;
+      list.appendChild(li);
+    });
+    return list;
   }
 }
