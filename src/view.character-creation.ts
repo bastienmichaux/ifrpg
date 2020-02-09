@@ -16,8 +16,6 @@ export class CharacterCreationView {
         selectedGender = (input.value === 'male' ? true : false);
       }
     });
-    console.log(name);
-    console.log(selectedGender);
     return new Character(name, selectedGender);
   }
 
@@ -46,7 +44,11 @@ export class CharacterCreationView {
     // class input
     const classInput = DomService.getRadioInputs({
       id: 'class',
-      values: ['Warrior', 'Thief', 'Wizard']
+      values: [
+        'Warrior',
+        'Thief',
+        'Wizard'
+      ]
     });
 
     // submit button
@@ -63,8 +65,8 @@ export class CharacterCreationView {
     frg.appendChild(genderInput);
     frg.appendChild(DomService.getP('Character name'));
     frg.appendChild(nameInput);
-    // frg.appendChild(DomService.getP('Character class'));
-    // frg.appendChild(classInput);
+    frg.appendChild(DomService.getP('Character class'));
+    frg.appendChild(classInput);
     frg.appendChild(submitBtn);
     document.getElementById('app').appendChild(frg);
   }
