@@ -1,6 +1,21 @@
 * {
   border-collapse: collapse;
+  box-sizing: border-box;
 }
+
+h1 {font-size: 18px;}
+
+// main views
+// #app {}
+// #character-creation-view {}
+// #character-view {}
+// #diary-view {}
+// #exploration-view {}
+// #inventory-view {}
+// #settings-view {}
+// #spellbook-view {}
+// #start-view {}
+// #travel-view {}
 
 .blocky {
   display: block;
