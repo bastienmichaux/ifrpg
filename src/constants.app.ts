@@ -3,6 +3,7 @@ export const CONSTANTS = {
   BASE_CHARACTERISTICS: 10,
 };
 
+// TODO: use ids for root div of views
 export const enum ID {
   APP = 'app',
   CHARACTER_CREATION_VIEW = 'character-creation-view',
