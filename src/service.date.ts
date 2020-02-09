@@ -14,7 +14,8 @@ export class DateService {
     const month = DateService.monthToString(gameDate.month);
     const day = DateService.dayToString(gameDate.day);
     const time = DateService.timeToString(gameDate.time);
-    return `${day} of ${month} ${year} - ${time}`;
+    const moon = DateService.moonPhase(gameDate.day);
+    return `${day} of ${month} ${year} ${moon} ${time}`;
   }
 
   private static dayToString(day: number): string {
@@ -52,25 +53,38 @@ export class DateService {
     // TODO: realistic daytime
     // TODO: daytime f day of the year
     // TODO: unknown/assumed daytime if inside since > (n hours inside + (avg(intelligence+perception)/2) - 20)
-    if (daytime >= 0 && daytime < 4 * 60 * 60) return 'late night';
-    if (daytime >= 4 * 60 * 60 && daytime < 6 * 60 * 60) return 'early morning';
-    if (daytime >= 6 * 60 * 60 && daytime < 7 * 60 * 60) return 'dawn';
-    if (daytime >= 7 * 60 * 60 && daytime < 11 * 60 * 60) return 'morning';
-    if (daytime >= 11 * 60 * 60 && daytime < 13 * 60 * 60) return 'noon';
-    if (daytime >= 13 * 60 * 60 && daytime < 14 * 60 * 60) return 'early afternoon';
-    if (daytime >= 14 * 60 * 60 && daytime < 15 * 60 * 60) return 'afternoon';
-    if (daytime >= 15 * 60 * 60 && daytime < 18 * 60 * 60) return 'twilight';
-    if (daytime >= 18 * 60 * 60 && daytime < 20 * 60 * 60) return 'evening';
-    if (daytime >= 20 * 60 * 60 && daytime <= 24 * 60 * 60) return 'night';
-    else throw new Error(`unknown daytime ${daytime}`)
+    if (daytime > 24 * 60 * 60) throw new Error(`invalid daytime ${daytime}`);
+    if (daytime >= 20 * 60 * 60) return 'night';
+    if (daytime >= 18 * 60 * 60) return 'evening';
+    if (daytime >= 15 * 60 * 60) return 'twilight';
+    if (daytime >= 14 * 60 * 60) return 'afternoon';
+    if (daytime >= 13 * 60 * 60) return 'early afternoon';
+    if (daytime >= 11 * 60 * 60) return 'noon';
+    if (daytime >= 7 * 60 * 60) return 'morning';
+    if (daytime >= 6 * 60 * 60) return 'dawn';
+    if (daytime >= 4 * 60 * 60) return 'early morning';
+    if (daytime >= 0) return 'late night';
+    throw new Error(`unknown daytime ${daytime}`)
   }
 
   static randomDate(): GameDate {
     return {
       year: 1236 + DiceService.d(224),
-      month: DiceService.d(12),
-      day: DiceService.d(30),
-      time: DiceService.d(24 * 60 * 60)
+      month: DiceService.d(12) + 1,
+      day: DiceService.d(30) + 1,
+      time: DiceService.d(24 * 60 * 60) + 1
     }
+  }
+
+  // TODO: realistic phases + influence on game
+  static moonPhase(day: number): string {
+    if (day > 28) return '🌘'; // Waning Crescent Moon
+    if (day > 24) return '🌗'; // Last Quarter Moon
+    if (day > 20) return '🌖'; // Waning Gibbous Moon
+    if (day > 16) return '🌕'; // Full Moon
+    if (day > 12) return '🌔'; // Waxing Gibbous Moon
+    if (day > 8) return '🌓'; // First Quarter Moon
+    if (day > 4) return '🌒'; // Waxing Crescent Moon
+    if (day > 0) return '🌑'; // New Moon
   }
 }
