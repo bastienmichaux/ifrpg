@@ -2,8 +2,8 @@ import { AppService } from "./service.app";
 import { DomService } from "./service.dom";
 import { ExplorationView } from "./view.exploration";
 import { Character } from "./model.character";
-import { NewGameGenerator } from "./generator.new-game";
 import { StoreService } from "./service.store";
+import { DateService, GameDate } from "./service.date";
 
 export class CharacterCreationView {
   static getSelectedValues(): Character {
@@ -24,11 +24,7 @@ export class CharacterCreationView {
 
   static submitCharacter() {
     const character = CharacterCreationView.getSelectedValues();
-    // TODO: store character
-    // TODO: generate random starting position
-    ExplorationView.render();
-    const time = NewGameGenerator.getDayTime();
-    StoreService.saveDate(time);
+
   }
 
   static render(): void {

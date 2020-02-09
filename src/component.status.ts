@@ -1,14 +1,12 @@
 import { DomService } from "./service.dom";
-import { TimeService } from "./service.time";
 import { StoreService } from "./service.store";
+import { DateService } from "./service.date";
 
 export class StatusComponent {
   static getComponent(): DocumentFragment {
     // stored data
-    // TODO: game start ? random gen : get it from storage
     const location = 'No location';
-    const time = StoreService.loadDate();
-    const timeStr = `Day 1 - ${TimeService.getTimeToString(time)}`;
+    const timeStr = StoreService.loadDateToString();
 
     // TODO: breadcrumbs from store
     const travelCrumbs = DomService.getP(`Region > Settlement > Room`);
