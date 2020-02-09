@@ -1,6 +1,5 @@
 import { DomService } from "./service.dom";
 import { StoreService } from "./service.store";
-import { DateService } from "./service.date";
 
 export class StatusComponent {
   static getComponent(): DocumentFragment {
