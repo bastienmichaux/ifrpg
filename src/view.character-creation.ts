@@ -21,6 +21,7 @@ export class CharacterCreationView {
 
   static submitCharacter() {
     const character = CharacterCreationView.getSelectedValues();
+    // TODO: check inputs are valid
     NewGameService.setNewGame();
     ExplorationView.render();
   }
