@@ -10,7 +10,7 @@ export class CharacterView {
     const frg = new DocumentFragment();
     frg.appendChild(StatusComponent.getComponent());
     frg.appendChild(ViewSwitchComponent.getComponent());
-    frg.appendChild(DomService.getP('Character view'));
+    frg.appendChild(DomService.getH1('Your character'));
     document.getElementById('app').appendChild(frg);
   }
 }
