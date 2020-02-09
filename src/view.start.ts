@@ -17,7 +17,7 @@ export class StartView {
     const savedGameExists = false;
 
     // start screen title
-    const title = DomService.getP('ifprg');
+    const title = DomService.getH1('IFRPG');
 
     // new game button
     const newGameBtn = DomService.getBlockyButton({

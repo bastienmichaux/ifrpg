@@ -27,7 +27,7 @@ export class CharacterCreationView {
 
   static render(): void {
     // page title
-    const title = DomService.getP('Create your character');
+    const title = DomService.getH1('Create your character');
 
     // gender input
     const genderInput = DomService.getRadioInputs({
