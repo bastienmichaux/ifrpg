@@ -17,7 +17,7 @@ export class Character {
   maxHp: number;
 
   // aliases
-  BASE_CHAR_SCORE = CONSTANTS.BASE_PRIMARY_CHARACTERISTIC_SCORE;
+  BASE_CHAR = CONSTANTS.BASE_CHARACTERISTICS;
 
   // TODO: what's needed to generate a character?
   // (randomly or based on player's choices)
@@ -26,12 +26,12 @@ export class Character {
     this.gender = gender;
 
     // primary characteristics
-    this.strength = this.BASE_CHAR_SCORE;
-    this.dexterity = this.BASE_CHAR_SCORE;
-    this.endurance = this.BASE_CHAR_SCORE;
-    this.intelligence = this.BASE_CHAR_SCORE;
-    this.perception = this.BASE_CHAR_SCORE;
-    this.charisma = this.BASE_CHAR_SCORE;
+    this.strength = this.BASE_CHAR;
+    this.dexterity = this.BASE_CHAR;
+    this.endurance = this.BASE_CHAR;
+    this.intelligence = this.BASE_CHAR;
+    this.perception = this.BASE_CHAR;
+    this.charisma = this.BASE_CHAR;
 
     // secondary characteristics
     this.hp = this.maxHp = CONSTANTS.BASE_HP;

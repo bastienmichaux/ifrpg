@@ -1,6 +1,6 @@
 export const CONSTANTS = {
   BASE_HP: 10,
-  BASE_PRIMARY_CHARACTERISTIC_SCORE: 10,
+  BASE_CHARACTERISTICS: 10,
 };
 
 export const enum ID {
